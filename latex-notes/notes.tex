@@ -1,0 +1,94 @@
+\documentclass[a4paper,12pt]{article}
+\pdfoutput=1 % if your are submitting a pdflatex (i.e. if you have
+             % images in pdf, png or jpg format)
+
+%-------------------------
+% Width and height of the text area correpond the a4wide package
+\usepackage[a4paper,textwidth=460.72124pt,textheight=621.0pt]{geometry}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage[labelfont=bf]{caption}
+\usepackage{subcaption}
+
+%-------------------------
+\usepackage[T1]{fontenc} 
+\usepackage[utf8]{inputenc}
+
+%-------------------------
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{etoolbox} % for simple if constructs
+\usepackage{booktabs} % nicer tables
+
+%-------------------------
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\numberwithin{equation}{section}
+
+%-------------------------
+\usepackage[colorlinks]{hyperref}
+\hypersetup{
+ citecolor=blue,
+ linkcolor=blue,
+ urlcolor=blue}
+
+% clever refs
+\usepackage[capitalize]{cleveref}
+
+%% % macros
+%% \input{macros.tex}
+
+
+\title{Notes template}
+\author{Wojciech Bizon}
+\date{\today}
+
+%-------------------------
+\begin{document}
+
+
+%>>> front page
+\pagenumbering{roman}
+\pagestyle{empty}
+
+
+%>>> title and authors
+\maketitle
+
+
+%>>> table of contents
+{
+  \hypersetup{linkcolor=black}
+  \tableofcontents
+}
+\clearpage
+
+
+%>>> text
+\pagestyle{plain}
+\pagenumbering{arabic}
+\allowdisplaybreaks
+
+%-------------------------
+%\input{sec_intro.tex}
+
+%-------------------------
+%\input{sec_general.tex}
+
+%-------------------------
+%\input{sec_summary.tex}
+
+%-------------------------
+\section*{Acknowledgements}
+%
+This style shows an easy way of keeping notes in \LaTeX. It supports
+math as well as citations to interesting articles such as~\cite{Behring:2019oci}.
+
+% -------------------------
+\appendix
+
+%-------------------------
+\bibliographystyle{utphys}
+\bibliography{refs}{}
+\end{document}
